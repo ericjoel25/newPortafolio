@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/newPortafolio/static/css/main.828287c6.css",
-    "main.js": "/newPortafolio/static/js/main.a83b805e.js",
-    "static/js/787.c5eb2a2f.chunk.js": "/newPortafolio/static/js/787.c5eb2a2f.chunk.js",
-    "static/media/homeImg.webp": "/newPortafolio/static/media/homeImg.b18bdc3bef70b19442fe.webp",
-    "static/media/Eric2.webp": "/newPortafolio/static/media/Eric2.441eacf7126851ba59d5.webp",
-    "static/media/Ortografia.webp": "/newPortafolio/static/media/Ortografia.33df9a75f1e0c68c3728.webp",
-    "static/media/ReactNative.webp": "/newPortafolio/static/media/ReactNative.a6ca22f530239bd9da6b.webp",
-    "static/media/venta.webp": "/newPortafolio/static/media/venta.85352ec7c548f106014f.webp",
-    "static/media/React.webp": "/newPortafolio/static/media/React.068a159a20e8f2fdaa66.webp",
-    "static/media/Javascript.webp": "/newPortafolio/static/media/Javascript.063f0a7d30dd9113e413.webp",
-    "static/media/CSS.webp": "/newPortafolio/static/media/CSS.fb54d0c6deccb53ad461.webp",
-    "static/media/Granja.webp": "/newPortafolio/static/media/Granja.b2fe3085029f32545980.webp",
-    "static/media/HTML.webp": "/newPortafolio/static/media/HTML.3648c536ebf2b4953048.webp",
-    "static/media/Tauri.webp": "/newPortafolio/static/media/Tauri.4c3ea27ef317a098bae9.webp",
-    "static/media/Firebase.webp": "/newPortafolio/static/media/Firebase.adb601f5c2024e3caea6.webp",
-    "static/media/github.webp": "/newPortafolio/static/media/github.096f9e06a33e5a8a4417.webp",
-    "static/media/Expo.webp": "/newPortafolio/static/media/Expo.b5b3a8c76155c4dceb5a.webp",
-    "static/media/Git.webp": "/newPortafolio/static/media/Git.33d7b780ba96d898907b.webp",
-    "index.html": "/newPortafolio/index.html",
-    "main.828287c6.css.map": "/newPortafolio/static/css/main.828287c6.css.map",
-    "main.a83b805e.js.map": "/newPortafolio/static/js/main.a83b805e.js.map",
-    "787.c5eb2a2f.chunk.js.map": "/newPortafolio/static/js/787.c5eb2a2f.chunk.js.map"
+    "main.css": "/static/css/main.828287c6.css",
+    "main.js": "/static/js/main.fdf0da83.js",
+    "static/js/787.c5eb2a2f.chunk.js": "/static/js/787.c5eb2a2f.chunk.js",
+    "static/media/homeImg.webp": "/static/media/homeImg.b18bdc3bef70b19442fe.webp",
+    "static/media/Eric2.webp": "/static/media/Eric2.441eacf7126851ba59d5.webp",
+    "static/media/Ortografia.webp": "/static/media/Ortografia.33df9a75f1e0c68c3728.webp",
+    "static/media/ReactNative.webp": "/static/media/ReactNative.a6ca22f530239bd9da6b.webp",
+    "static/media/venta.webp": "/static/media/venta.85352ec7c548f106014f.webp",
+    "static/media/React.webp": "/static/media/React.068a159a20e8f2fdaa66.webp",
+    "static/media/Javascript.webp": "/static/media/Javascript.063f0a7d30dd9113e413.webp",
+    "static/media/CSS.webp": "/static/media/CSS.fb54d0c6deccb53ad461.webp",
+    "static/media/Granja.webp": "/static/media/Granja.b2fe3085029f32545980.webp",
+    "static/media/HTML.webp": "/static/media/HTML.3648c536ebf2b4953048.webp",
+    "static/media/Tauri.webp": "/static/media/Tauri.4c3ea27ef317a098bae9.webp",
+    "static/media/Firebase.webp": "/static/media/Firebase.adb601f5c2024e3caea6.webp",
+    "static/media/github.webp": "/static/media/github.096f9e06a33e5a8a4417.webp",
+    "static/media/Expo.webp": "/static/media/Expo.b5b3a8c76155c4dceb5a.webp",
+    "static/media/Git.webp": "/static/media/Git.33d7b780ba96d898907b.webp",
+    "index.html": "/index.html",
+    "main.828287c6.css.map": "/static/css/main.828287c6.css.map",
+    "main.fdf0da83.js.map": "/static/js/main.fdf0da83.js.map",
+    "787.c5eb2a2f.chunk.js.map": "/static/js/787.c5eb2a2f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.828287c6.css",
-    "static/js/main.a83b805e.js"
+    "static/js/main.fdf0da83.js"
   ]
 }
