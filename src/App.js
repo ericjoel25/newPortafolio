@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import React,{useState} from 'react';
+import './App.css';
+import Menu from './components/menu/menu';
+import Background from './pages/background';
+import appStyle from './components/styles/app.module.css'; 
+import Home from './pages/home';
+import About from './pages/about';
+import Skill from './pages/skill';
+import Myprojects from './pages/myProjects';
+import Contact from './pages/contact';
+
+export default function App() {
+ 
+  const [value, setValue]= useState('home');
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className={appStyle.container}>
+      <Background />
+      <Menu value={value} setValue={setValue} />
+
+      <section className={appStyle.body}>
+        <Home value={value} />
+        <About value={value} />
+        <Skill value={value} />
+        <Myprojects value={value} />
+        <Contact value={value} />
+      </section>
+      
+    </main>
   );
+
 }
 
-export default App;
+
+
