@@ -1,7 +1,7 @@
 {
   "name": "my-portafolio",
   "version": "0.1.0",
-  "homepage":"https://ericjoel25.github.io/newPortafolio", 
+  "homepage":"https://ericjoelmarte.com", 
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
