@@ -1,11 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.42db9f16.css",
-    "main.js": "/static/js/main.41ffb0aa.js",
+    "main.css": "/static/css/main.4f113120.css",
+    "main.js": "/static/js/main.a4f9b175.js",
     "static/js/787.c5eb2a2f.chunk.js": "/static/js/787.c5eb2a2f.chunk.js",
     "static/media/homeImg.webp": "/static/media/homeImg.b18bdc3bef70b19442fe.webp",
     "static/media/Eric2.webp": "/static/media/Eric2.441eacf7126851ba59d5.webp",
+    "static/media/prestar.webp": "/static/media/prestar.205197e13501cddadd57.webp",
+    "static/media/ventaPC.webp": "/static/media/ventaPC.734641d8b7f20feab2f5.webp",
     "static/media/Ortografia.webp": "/static/media/Ortografia.33df9a75f1e0c68c3728.webp",
+    "static/media/granja2.webp": "/static/media/granja2.ac57fb24d36d1d7f2d5a.webp",
     "static/media/ReactNative.webp": "/static/media/ReactNative.a6ca22f530239bd9da6b.webp",
     "static/media/venta.webp": "/static/media/venta.85352ec7c548f106014f.webp",
     "static/media/React.webp": "/static/media/React.068a159a20e8f2fdaa66.webp",
@@ -16,15 +19,16 @@
     "static/media/Tauri.webp": "/static/media/Tauri.4c3ea27ef317a098bae9.webp",
     "static/media/Firebase.webp": "/static/media/Firebase.adb601f5c2024e3caea6.webp",
     "static/media/github.webp": "/static/media/github.096f9e06a33e5a8a4417.webp",
+    "static/media/IMC.webp": "/static/media/IMC.f7ae74f33b1e6f8ce3df.webp",
     "static/media/Expo.webp": "/static/media/Expo.b5b3a8c76155c4dceb5a.webp",
     "static/media/Git.webp": "/static/media/Git.33d7b780ba96d898907b.webp",
     "index.html": "/index.html",
-    "main.42db9f16.css.map": "/static/css/main.42db9f16.css.map",
-    "main.41ffb0aa.js.map": "/static/js/main.41ffb0aa.js.map",
+    "main.4f113120.css.map": "/static/css/main.4f113120.css.map",
+    "main.a4f9b175.js.map": "/static/js/main.a4f9b175.js.map",
     "787.c5eb2a2f.chunk.js.map": "/static/js/787.c5eb2a2f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.42db9f16.css",
-    "static/js/main.41ffb0aa.js"
+    "static/css/main.4f113120.css",
+    "static/js/main.a4f9b175.js"
   ]
 }
