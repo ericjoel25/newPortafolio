@@ -12,8 +12,10 @@ import GitIcon from '../components/images/Git.webp';
 import Typewriter from 'typewriter-effect';
 
 
-export default function Skill(props) {
-    const {value}=props
+export function Skill(props) {
+   const { value } = props
+
+   if (value !== 'skill') return <></>;
 
    const data = [
       {
@@ -53,42 +55,38 @@ export default function Skill(props) {
          title: 'Git',
          Image: GitIcon
       }
-   ]
+   ];
 
    return (
-     <>
-      {value ==='skill'?(
-           <main className={skillStyle.container}>
 
-           <section className={skillStyle.body}>
-              
-              <span className={skillStyle.text}>
-                    <Typewriter
-                       onInit={(typewriter) => {
-                          typewriter.typeString("My Skills")
-                             .pauseFor(2500)
-                             //.deleteAll()
-                             .start();
-                       }}
-                    />
-              </span>
-              <section className={skillStyle.bodyCard} >
-                 {data.map((list, index) => {
-                    return (
-                       <article className={`${skillStyle.card} ${skillStyle.animate}`} key={index}>
-                          <img src={list.Image} alt={`Imagen-${list.title}`} className={skillStyle.Image} />
-                          <span className={skillStyle.imageText}>{list.title}</span>
-                       </article>
-                    )
-                 })}
-     
-              </section>
-     
-              </section>
-           </main>
-      ):(
-          <></>
-      )}
-     </>
+      <main className={skillStyle.container}>
+
+         <section className={skillStyle.body}>
+
+            <span className={skillStyle.text}>
+               <Typewriter
+                  onInit={(typewriter) => {
+                     typewriter.typeString("My Skills")
+                        .pauseFor(2500)
+                        //.deleteAll()
+                        .start();
+                  }}
+               />
+            </span>
+            <section className={skillStyle.bodyCard} >
+               {data.map((list, index) => {
+                  return (
+                     <article className={`${skillStyle.card} ${skillStyle.animate}`} key={index}>
+                        <img src={list.Image} alt={`Imagen-${list.title}`} className={skillStyle.Image} />
+                        <span className={skillStyle.imageText}>{list.title}</span>
+                     </article>
+                  )
+               })}
+
+            </section>
+
+         </section>
+      </main>
+
    )
 }

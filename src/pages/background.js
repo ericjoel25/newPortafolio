@@ -1,7 +1,7 @@
 import React from "react";
 import BackgroundStyle from '../components/styles/background.module.css';
 
-export default function Background() {
+export function Background() {
     return (
         <main className={BackgroundStyle.container}>
             <div className={BackgroundStyle.galaxy}>

@@ -54,9 +54,9 @@
     margin-bottom: 5vh;
 }
 .card:hover{
-    -webkit-box-shadow: 0px 11px 22px 11px rgba(212, 175, 55, 0.8);
-    -moz-box-shadow: 0px 11px 22px 11px rgba(212, 175, 55, 0.8);
-    box-shadow: 0px 11px 22px 11px rgba(212, 175, 55, 0.8);
+    -webkit-box-shadow: 0px 6px 11px 6px rgba(212, 175, 55, 0.8);
+    -moz-box-shadow: 0px 6px 11px 6px rgba(212, 175, 55, 0.8);
+    box-shadow: 0px 6px 11px 6px rgba(212, 175, 55, 0.8);
 }
 .Image{
     width: 7rem;
@@ -78,19 +78,19 @@
 
 @media screen and (max-width:767px){
 
-    .body{ 
-        
+    .body{  
         position: absolute;
         top: 10vh;
         height:90vh;
         width:100%;
+        padding-bottom: 0vh;
         overflow: auto;
     }
 
     .bodyCard{
-      padding-bottom: -2vh;
-
-    }
+        padding-bottom: 10vh;
+  
+      }
 }
 
   

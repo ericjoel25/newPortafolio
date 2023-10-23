@@ -24,7 +24,7 @@
 .article{
     display: flex;
    /* margin-left: 6rem;*/
-    width: 90%;
+    width: 100%;
     justify-content: center;
     flex-direction: column;
     grid-column:span 2;
@@ -78,7 +78,7 @@
 
 .article2{
   display: flex;
-  width:90%;
+  width:100%;
   justify-content: center;
   align-items: center;
   grid-column:span 2;
@@ -86,8 +86,9 @@
 }
 
 .homeImg{
-    width:calc((30% + 8rem));
-    height:calc((30% + 8rem)) 
+    width:17rem;
+    height:17rem; 
+    border-radius: 50%;
 }
 @media screen and (max-width:767px){
     .body{
@@ -99,4 +100,14 @@
     .title{
         font-size:2.5rem;
     }
+
+    .article2{
+        display: flex;
+        width:100%;
+        justify-content: flex-start;
+        align-items: center;
+        grid-column:span 2;
+        flex-direction: column;
+       
+      }
 }

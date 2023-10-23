@@ -1,27 +1,24 @@
 
-import React,{useState} from 'react';
+import React,{useState, useRef} from 'react';
 import './App.css';
 import Menu from './components/menu/menu';
-import Background from './pages/background';
 import appStyle from './components/styles/app.module.css'; 
-import Home from './pages/home';
-import About from './pages/about';
-import Skill from './pages/skill';
-import Myprojects from './pages/myProjects';
-import Contact from './pages/contact';
+import {Contact, About, Background, Home, Myprojects, Skill} from './pages';
+
 
 export default function App() {
  
   const [value, setValue]= useState('home');
 
 
+
   return (
-    <main className={appStyle.container}>
-      <Background />
+    <main  className={appStyle.container}>
+      {/*<Background />*/}
       <Menu value={value} setValue={setValue} />
 
       <section className={appStyle.body}>
-        <Home value={value} />
+        <Home value={value} setValue={setValue} />
         <About value={value} />
         <Skill value={value} />
         <Myprojects value={value} />
