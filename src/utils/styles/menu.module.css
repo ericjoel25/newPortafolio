@@ -1,0 +1,282 @@
+
+.menu{ 
+    z-index: 1;
+    position:fixed;
+    width: 6rem;
+    height: 100vh;
+    background-color: rgb(20, 30, 48, 0.5);
+    margin-right: 8rem;
+}
+.menu2{
+    display: none;
+}
+.menu3{
+    display: none;
+}
+.hideMenu{
+    display: none;
+}
+.showMenuHeader{
+    display: none;
+}
+.hideMenu2{
+    display: none;
+}
+.btnHiden{
+  display: none;
+}
+.fotoContainer{
+    display: flex;
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 3.5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(19, 19, 19, 0.5);
+}
+.foto{
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+.btn{
+    display: flex;
+    width: 5rem;
+    height: 1.5rem;
+    outline-color: none;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    box-sizing: none;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2rem;
+    margin-bottom: 4rem;
+    color: transparent;
+    text-decoration: none;
+    user-select: none;
+    outline: none;
+    
+}
+.btnIcon{
+    width: 5rem;
+    height: 1.5rem;
+    position: absolute;
+    color: #fff;
+    outline: none;
+}
+
+.activate{
+    width: 5rem;
+    height: 1.5rem;
+    position: absolute;
+    color: #4D6981;
+    outline: none;
+}
+
+.btn:hover{
+    color: #fff;
+}
+
+.activate:hover{
+    content: 'hola';
+    color:transparent
+}
+
+.btnIcon:hover{
+  content: 'hola';
+  color:transparent
+}
+
+
+@media screen and (max-width:767px) {
+.menu{
+    display: none;
+}
+
+    
+.menu2{ 
+    z-index: 2;
+    display: block;
+    position:fixed;
+    width: 50%;
+    height: 100vh;
+    background-color: rgb(20, 30, 48, 1);
+    margin-right: 8rem;
+    transition: 0.5s;
+    animation: animatezoom 0.6s;
+    -webkit-animation: animatezoom 0.6s;
+}
+.menu3{ 
+    z-index: 2;
+    display: block;
+    position:fixed;
+    width: 50%;
+    height: 100vh;
+    background-color: rgb(20, 30, 48, 1);
+    margin-right: 8rem;
+   
+}
+.hideMenu{
+    display: none;
+}
+.hidenMenuBody{
+    display: none;
+}
+.showMenuHeader{
+    z-index: 1;
+    display:flex;
+    width: 100%;
+    height: 3rem;
+    position:fixed;
+    top: 1rem;
+    margin-left: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.showbtn{
+  display:flex;
+  width: 5rem;
+  height: 2.5rem;
+  background-color: rgba(51, 95, 132, 0.4);
+  align-items: center;
+  justify-content: center;
+  
+}
+.faBars{
+  width: 5rem;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.fotoContainer2{
+    display: flex;
+    width:100%;
+    height: 6rem;
+    margin-bottom: 3.5rem;
+    justify-content:space-around;
+    align-items: center;
+    background-color: rgb(19, 19, 19, 0.5);
+
+}
+.foto2{
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+.btn2{
+    display: flex;
+    width: 5rem;
+    height: 1.5rem;
+    outline-color: none;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    box-sizing: none;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2rem;
+    margin-bottom: 4rem;
+    color: transparent;
+    text-decoration: none;
+    user-select: none;
+    outline: none;
+    
+}
+.btnIcon2{
+    width: 5rem;
+    height: 1.5rem;
+    position: absolute;
+    color: #fff;
+    outline: none;
+}
+
+.activate2{
+    width: 5rem;
+    height: 1.5rem;
+    position: absolute;
+    color: #4D6981;
+    outline: none;
+}
+
+.btn2:hover{
+    color: #fff;
+    outline: none;
+}
+
+.activate2:hover{
+    content: 'hola';
+    color:transparent;
+    outline: none;
+}
+
+.btnIcon2:hover{
+  content: 'hola';
+  color:transparent;
+  outline: none;
+}
+
+
+.hideMenu2{
+    z-index: 2;
+    display: block;
+    position:fixed;
+    width: 0%;
+    height: 100vh;
+    margin-right: 8rem;
+    transition: 0.5s;
+    background-color: rgb(20, 30, 48, 1);
+    animation: animatezoomOut 0.6s;
+    -webkit-animation: animatezoomOut 0.6s;
+    
+}
+
+.btnHiden{
+    display: none;
+}
+
+}
+
+  
+  @-webkit-keyframes animatezoom{
+      from{
+        width: 0;
+      }
+      to{
+        width: 50%;
+      }
+  }
+  @keyframes animatezoom{
+      from{
+         width: 0;
+      }
+      to{
+        width: 50%;
+      }
+  }
+
+  @-webkit-keyframes animatezoomOut{
+    from{
+      width: 50%;
+    }
+    to{
+      width: 0%;
+    }
+}
+@keyframes animatezoomOut{
+    from{
+       width: 50%;
+    }
+    to{
+      width: 0%;
+    }
+}
+
+  

@@ -1,0 +1,110 @@
+.container{
+    position:fixed;
+    height: 100vh;
+    width: 100%;
+    touch-action: none;
+    background: #000428;  /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to bottom, #000428, #013058); *//* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #292c86, #12123b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.body{
+  height: 100%;
+  width: 100%;
+ /* background-color: red;*/
+  overflow-y: scroll;
+}
+
+.header{
+  z-index: 1;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  justify-content:center;
+  align-items: center;
+}
+.header> a{
+    color: #f5f3ed;
+    font-weight: bold;
+    font-family:Georgia;
+    font-size: 0.9rem;
+}
+.headerBtn{
+    margin-left: 0.5rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.Home{
+    position: relative;
+    height: 100%;
+    width: 100%;
+   /* background-color: #000;*/
+}
+
+.About{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.Projects{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.Skill{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.Contact{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.Img{
+    position: absolute;
+    top: -2rem;
+    left: 2rem;
+    width: 35rem;
+    height: 28rem;
+    border-radius:0.5rem; 
+}
+
+.Img{
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+    animation-name: show;
+    animation-range: entry 25% cover 70%;
+    animation-fill-mode: both;
+    
+}
+
+.headerIcon{
+  width: 2rem;
+  height: 2rem;
+}
+
+@keyframes show {
+    from {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    to {
+        position: absolute;
+        top: -2rem;
+        left: 2rem;
+    }
+}
