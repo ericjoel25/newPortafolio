@@ -10,6 +10,7 @@ export function Contact({language}) {
   const [formData, setFormData] = useState({ subject: '', email: '', message: '' })
 
 
+  
   function handleTextChange({ data, type }) {
     const value = data.target.value;
     setFormData({ ...formData, [type]: value })

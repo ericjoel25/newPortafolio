@@ -8,6 +8,7 @@ export function Myprojects3({language}) {
 
    const [showAlert, setShowAlert] = useState(false); 
 
+   
    const data ={
       en:{
          title:"Project (3)", 

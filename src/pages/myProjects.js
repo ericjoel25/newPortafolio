@@ -29,6 +29,7 @@ const data ={
 
 }
 
+
 function certificaciones({type, show}) {
    if(type === "code" && !show){
 

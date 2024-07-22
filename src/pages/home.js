@@ -4,6 +4,7 @@ import {mePhoto} from '../components/images';
 
 export function Home({callback, language}) {
 
+    
     const data ={
         en:{
            sayHello:"Hi there!", 

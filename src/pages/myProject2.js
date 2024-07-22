@@ -5,6 +5,7 @@ import {granjaImg} from '../components/images';
 export function Myprojects2({language}) {
 
   
+   
    const data ={
       en:{
          title:"Project (2)", 

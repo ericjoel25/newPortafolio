@@ -5,6 +5,7 @@ import modalStyle from './modal.module.css';
 
 export function Modal({visible, title, bodyColor='#7CAD4A', textColor='#000', buttonColor='#204108', button1='', button2='', fnButton1, fnButton2 }){
 
+    
     return(
 
         <>
