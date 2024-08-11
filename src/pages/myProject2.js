@@ -37,15 +37,15 @@ export function Myprojects2({language}) {
    return (
 
       <main className={projectyle.container}>
-         <article className={projectyle.bodyCard}>
+         
           
-            <section className={projectyle.card2}>
+            <article className={projectyle.card2}>
                <div className={projectyle.card2ImgContainer}>
-                 <img  src={granjaImg} className={appStyle.Img}/>
+                 <img  src={granjaImg} className={projectyle.Img}/>
                </div>
-            </section>
+            </article>
 
-            <section className={projectyle.card}>
+            <article className={projectyle.card}>
                <p className={projectyle.cardTitle}>{data[language]?.title}</p>
                <p className={projectyle.cardTitle2}>{data[language]?.title2}</p>
                <p className={projectyle.cardText}>{data[language]?.category}</p>
@@ -57,9 +57,8 @@ export function Myprojects2({language}) {
                   <button className={projectyle.btn} onClick={()=> certificaciones({type:"code", show:true})}>Code</button>
                   <button className={projectyle.btn}  onClick={()=> certificaciones({type:"demo", show:true})}>Demo</button>
                </div>
-            </section>
-         </article>
-
+            </article>
+        
       </main>
 
    )

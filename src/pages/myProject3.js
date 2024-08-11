@@ -2,11 +2,10 @@
 import {useState} from 'react';
 import {projectyle, appStyle} from '../utils/styles'; 
 import {seguridadImg} from '../components/images'; 
-import {Modal} from '../components/modal/modal'; 
 
-export function Myprojects3({language}) {
+export function Myprojects3({language, setShowAlert}) {
 
-   const [showAlert, setShowAlert] = useState(false); 
+   
 
    
    const data ={
@@ -44,8 +43,7 @@ export function Myprojects3({language}) {
    return (
 
       <main className={projectyle.container}>
-         <article className={projectyle.bodyCard}>
-            <section className={projectyle.card}>
+            <article className={projectyle.card}>
                <p className={projectyle.cardTitle}>{data[language].title}</p>
                <p className={projectyle.cardTitle2}>{data[language].title2}</p>
                <p className={projectyle.cardText}>{data[language].category}</p>
@@ -57,21 +55,13 @@ export function Myprojects3({language}) {
                   <button className={projectyle.btn} onClick={()=> certificaciones({type:"code", show:false})}>Code</button>
                   <button className={projectyle.btn}  onClick={()=> certificaciones({type:"code", show:false})}>Demo</button>
                </div>
-            </section>
-            <section className={projectyle.card2}>
+            </article>
+            <article className={projectyle.card2}>
                <div className={projectyle.card2ImgContainer}>
-                 <img  src={seguridadImg} className={appStyle.Img}/>
+                 <img  src={seguridadImg} className={projectyle.Img}/>
                </div>
-            </section>
-         </article>
-         <Modal 
-           visible={showAlert}
-           title={'El codigo es privado debido a que la app esta en produción'}
-           bodyColor="#839dd1"
-           button1="Ok"
-           fnButton1={()=> setShowAlert(false)}
-           buttonColor="#262c40"
-         />
+            </article>
+        
       </main>
 
    )

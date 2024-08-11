@@ -1,71 +1,82 @@
-.container{
-    position:relative;
-    height: 100%;
-    width: 100%;
- 
-}
-
-.body{
+.container {
   position: relative;
-  width: 96%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
-  grid-auto-flow:dense;
-  grid-gap: 2%;
-  -ms-grid-column-align: center;
-  -ms-grid-row-align: center;
-  padding: 0 2% 0 2%;
-  background-color: rgba(51, 95, 132, 0.4);
-  border-radius:2rem 2rem 0 0rem;
-
-}
-.title{
-    font-size:calc((1vw + 3rem));
-    font-weight: bold;
-    font-family:Georgia;
-    color: rgb(212, 175, 55);
-    word-break: keep-all;
-    margin-bottom: 8rem;
-    
-}
-
-.card{
-    display: flex;
-    width:100%;
-    height:100%;
-    border-radius: 1rem;
-    justify-content: center;
-    padding: 0 5%;
-    flex-direction: column;
-    grid-column:span 2;
-}
-
-.card2{
+  width: 100dvw;
+  height: 100dvh;
   display: flex;
-  width:100%;
-  height:100%;
-  grid-column:span 2;
+  flex-direction: row;
+
+}
+
+
+.title {
+  font-size: calc((1vw + 3rem));
+  font-weight: bold;
+  font-family: Georgia;
+  color: rgb(212, 175, 55);
+  word-break: keep-all;
+  margin-bottom: 2rem;
+
+}
+
+.ContactIconBody {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-items: center;
+  align-items: center;
+
+}
+
+.card {
+  position: relative;
+  display: flex;
+  width: 50dvw;
+  height: 100dvh;
+  border-radius: 1rem;
+  justify-content: center;
+  padding: 0 5%;
+  flex-direction: column;
+
+}
+
+.card2 {
+  position: relative;
+  display: flex;
+  width: 50dvw;
+  height: 100dvh;
+  grid-column: span 2;
   justify-content: center;
   align-items: center;
 }
 
-.cardText{
-    color: #fff;
-    font-size: 1.5rem;
-    margin-top: 1rem;
+.cardBtn {
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  height: 8rem;
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: rgba(51, 95, 132, 0.8);
+  margin: 0.2rem;
+  border-radius: 0.5rem;
 }
 
-.cardIcon{
-  margin-right: 1rem;
+.cardText {
+  font-size: 1.5rem;
 }
-.github{
+
+
+.github {
   width: 2rem;
   height: 2rem;
   margin-top: 1rem;
   margin-right: 1rem;
 }
-.card2Form{
+
+.card2Form {
   display: flex;
   width: 50%;
   height: 60%;
@@ -74,31 +85,98 @@
   padding: 2rem;
   background-color: rgba(51, 95, 132, 0.8);
 }
-.card2FormInput{
+
+.card2FormInput {
   width: 92%;
   height: 2.5rem;
   border: none;
   margin-bottom: 0.5rem;
-  border-radius:0.5rem;
-  outline:none;
+  border-radius: 0.5rem;
+  outline: none;
   padding: 0 4% 0 4%;
 }
-.card2FormInputLarge{
+
+.card2FormInputLarge {
   width: 92%;
   height: 8rem;
   border: none;
-  outline:none;
+  outline: none;
   padding: 2% 4% 2% 4%;
   margin-bottom: 0.5rem;
-  border-radius:0.5rem;
+  border-radius: 0.5rem;
   text-align: start;
   font-size: 1rem;
 }
-.card2Btn{
+
+.card2Btn {
   width: 6rem;
   height: 2rem;
   border: none;
   border-radius: 0.5rem;
   font-size: 1rem;
   font-weight: bold;
+}
+
+
+@media (width <=700px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .card {
+    position: relative;
+    display: flex;
+    width: 90dvw;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+  .title {
+    font-size: calc((1vw + 3rem));
+    font-weight: bold;
+    font-family: Georgia;
+    color: rgb(212, 175, 55);
+    word-break: keep-all;
+    margin-bottom: 2rem;
+    padding-top: 2.5rem;
+
+  }
+
+  .cardBtn {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 7rem;
+    color: #fff;
+    font-size: 1.5rem;
+
+
+  }
+
+  .ContactIconBody {
+    display: flex;
+    width: 70dvw;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card2{
+    width: 100dvw;
+  }
+
+  .card2Form {
+    display: flex;
+    width: 60dvw;
+    height: 50dvw;
+    border-radius: 1rem;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: rgba(51, 95, 132, 0.8);
+  }
 }

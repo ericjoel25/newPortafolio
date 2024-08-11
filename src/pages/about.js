@@ -31,15 +31,14 @@ export function About({gotoContact, language}) {
     return (
 
         <main className={aboutStyle.container}>
-            <article className={aboutStyle.body}>
-               <section className={aboutStyle.card2} >
+               <article className={aboutStyle.card2} >
                    
                    <div className={aboutStyle.imgContainer} >
                       <img src={foto} alt='home' className={aboutStyle.Img} />
                     </div>
-                </section>
+                </article>
 
-                <section className={aboutStyle.card} >
+                <article className={aboutStyle.card} >
                     <p className={aboutStyle.title} >{data[language]?.title}</p>
                     <p className={aboutStyle.title2}>
                      {data[language]?.title2}
@@ -48,9 +47,7 @@ export function About({gotoContact, language}) {
                       <button className={aboutStyle.cardbtn} onClick={()=> gotoContact()}>{data[language]?.btnText}</button>
                       <button className={aboutStyle.cardbtn} onClick={()=> downloadPDF()}>{data[language]?.btnText2}</button>
                     </div>
-                </section>
-
-            </article>
+                </article>
         </main>
 
     )

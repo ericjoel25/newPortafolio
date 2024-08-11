@@ -3,9 +3,8 @@ import {projectyle, appStyle} from '../utils/styles';
 import {ortografiaImg} from '../components/images'; 
 import {Modal} from '../components/modal/modal';
 
-export function Myprojects({language}) {
+export function Myprojects({language, setShowAlert}) {
  
- const [showAlert, setShowAlert] = useState(false); 
 
 const data ={
    en:{
@@ -42,8 +41,7 @@ function certificaciones({type, show}) {
  return (
 
       <main className={projectyle.container}>
-         <article className={projectyle.bodyCard}>
-            <section className={projectyle.card}>
+            <article className={projectyle.card}>
                <p className={projectyle.cardTitle}>{data[language]?.title}</p>
                <p className={projectyle.cardTitle2}>{data[language]?.title2}</p>
                <p className={projectyle.cardText}>{data[language]?.category}</p>
@@ -56,23 +54,15 @@ function certificaciones({type, show}) {
                   <button className={projectyle.btn} onClick={()=> certificaciones({type:"code", show:false})}>Code</button>
                   <button className={projectyle.btn}  onClick={()=> certificaciones({type:"demo", show:true})}>Demo</button>
                </div>
-            </section>
-            <section className={projectyle.card2}>
-               <div className={projectyle.card2ImgContainer}>
-                 <img  src={ortografiaImg} className={appStyle.Img}/>
-               </div>
-            </section>
+            </article>
 
-         </article>
-       
-         <Modal 
-           visible={showAlert}
-           title={'El codigo es privado debido a que la app esta en produción'}
-           bodyColor="#839dd1"
-           button1="Ok"
-           fnButton1={()=> setShowAlert(false)}
-           buttonColor="#262c40"
-         />
+            <article className={projectyle.card2}>
+               <div className={projectyle.card2ImgContainer}>
+                 <img  src={ortografiaImg} className={projectyle.Img}/>
+               </div>
+            </article>
+
+      
       </main>
 
    )

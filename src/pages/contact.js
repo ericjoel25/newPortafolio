@@ -6,11 +6,11 @@ import { contactStyle } from '../utils/styles';
 
 
 
-export function Contact({language}) {
+export function Contact({ language }) {
   const [formData, setFormData] = useState({ subject: '', email: '', message: '' })
 
 
-  
+
   function handleTextChange({ data, type }) {
     const value = data.target.value;
     setFormData({ ...formData, [type]: value })
@@ -49,77 +49,83 @@ export function Contact({language}) {
     }
 
   }
- 
-  const title = {
-    en:{
-       title:"Contact me!", 
-       
-    },
-    es:{
-       title:"¡Contáctame!", 
-    }
- }
 
+  const title = {
+    en: {
+      title: "Contact me!",
+
+    },
+    es: {
+      title: "¡Contáctame!",
+    }
+  }
+
+
+  function goTo({ URL }) {
+    const a = window.document.createElement("a");
+    a.href = URL;
+    a.target = "_black"
+    a.click();
+  }
 
 
   return (
 
     <main className={contactStyle.container}>
 
-
-      <article className={contactStyle.body}>
-        <section className={contactStyle.card}>
-          <span className={contactStyle.title} >
-            <p>{title[language].title}</p>
-          </span>
-          <span className={contactStyle.cardText}>
+      <section className={contactStyle.card}>
+        <span className={contactStyle.title} >
+          <p>{title[language].title}</p>
+        </span>
+        <div className={contactStyle.ContactIconBody}>
+          <span className={contactStyle.cardBtn} onClick={() => goTo({ URL: "mailto:ericjoelmarte.m@hotmail.com" })}>
             <FontAwesomeIcon icon={faEnvelope} className={contactStyle.cardIcon} />
-            <a href="mailto:ericjoelmarte.m@hotmail.com" className={contactStyle.cardText}>ericjoelmarte.m@hotmail.com</a>
+            <span className={contactStyle.cardText}>Email</span>
           </span>
-          <span className={contactStyle.cardText}>
+          <span className={contactStyle.cardBtn} onClick={() => goTo({ URL: "tel:+18293606091" })}>
             <FontAwesomeIcon icon={faPhone} className={contactStyle.cardIcon} />
-            <a href="tel:+18293606091" className={contactStyle.cardText}>(829)-360-6091</a>
+            <span className={contactStyle.cardText}>Phone</span>
           </span>
 
-          <span className={contactStyle.cardText}>
+          <span className={contactStyle.cardBtn} onClick={() => goTo({ URL: "https://github.com/ericjoel25" })}>
             <img src={github} className={contactStyle.github} alt='github' />
-            <a target="_blank"
-              href="https://github.com/ericjoel25"
-              className={contactStyle.cardText}>https://github.com/ericjoel25</a>
+            <span className={contactStyle.cardText}>Github</span>
           </span>
 
-          <span className={contactStyle.cardText}>
+          <span className={contactStyle.cardBtn} onClick={() => goTo({ URL: "/EricJoelMarte.pdf" })}>
             <FontAwesomeIcon icon={faUser} className={contactStyle.cardIcon} />
-            <a target="_blank" href="/EricJoelMarte.pdf" download className={contactStyle.cardText} > Download CV</a>
+            <span className={contactStyle.cardText}>Resume</span>
           </span>
 
-        </section>
-        <section className={contactStyle.card2}>
-          <form className={contactStyle.card2Form}>
+        </div>
 
-            <input className={contactStyle.card2FormInput}
-              type="email" placeholder="Email"
-              onChange={(value) => handleTextChange({ data: value, type: 'email' })}
-              value={formData.email}
-            />
-            <input className={contactStyle.card2FormInput}
-              type="text" placeholder="subject"
-              onChange={(value) => handleTextChange({ data: value, type: 'subject' })}
-              value={formData.subject}
-            />
-            <textarea className={contactStyle.card2FormInputLarge}
-              type="text" placeholder="Message"
-              onChange={(value) => handleTextChange({ data: value, type: 'message' })}
-              value={formData.message}
-            />
-            <button className={contactStyle.card2Btn} onClick={(e) => {
-              e.preventDefault()
-              sendEmail()
-              setFormData({ subject: '', email: '', message: '' })
-            }} >Send</button>
-          </form>
-        </section>
-      </article>
+      </section>
+      <section className={contactStyle.card2}>
+        <form className={contactStyle.card2Form}>
+
+          <input className={contactStyle.card2FormInput}
+            type="email" placeholder="Email"
+            onChange={(value) => handleTextChange({ data: value, type: 'email' })}
+            value={formData.email}
+          />
+          <input className={contactStyle.card2FormInput}
+            type="text" placeholder="subject"
+            onChange={(value) => handleTextChange({ data: value, type: 'subject' })}
+            value={formData.subject}
+          />
+          <textarea className={contactStyle.card2FormInputLarge}
+            type="text" placeholder="Message"
+            onChange={(value) => handleTextChange({ data: value, type: 'message' })}
+            value={formData.message}
+          />
+          <button className={contactStyle.card2Btn} onClick={(e) => {
+            e.preventDefault()
+            sendEmail()
+            setFormData({ subject: '', email: '', message: '' })
+          }} >Send</button>
+        </form>
+      </section>
+
     </main>
 
   )

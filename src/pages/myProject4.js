@@ -1,14 +1,11 @@
 
-import {useState} from 'react';
-import {projectyle, appStyle} from '../utils/styles'; 
+import {projectyle} from '../utils/styles'; 
 import {phoneimg} from '../components/images'; 
-import {Modal} from './../components/modal/modal';
 
-export function Myprojects4({language}) {
+
+export function Myprojects4({language, setShowAlert}) {
 
  
-   const [showAlert, setShowAlert] = useState(false); 
-
    const data ={
       en:{
          title:"Project (4)", 
@@ -46,15 +43,14 @@ export function Myprojects4({language}) {
    return (
 
       <main className={projectyle.container}>
-         <article className={projectyle.bodyCard}>
-          
-            <section className={projectyle.card2}>
+     
+            <article className={projectyle.card2}>
                <div className={projectyle.card2ImgContainer}>
-                 <img  src={phoneimg} className={appStyle.Img}/>
+                 <img  src={phoneimg} className={projectyle.Img}/>
                </div>
-            </section>
+            </article>
 
-            <section className={projectyle.card}>
+            <article className={projectyle.card}>
                <p className={projectyle.cardTitle}>{data[language].title}</p>
                <p className={projectyle.cardTitle2}>{data[language].title2}</p>
                <p className={projectyle.cardText}>{data[language].category}</p>
@@ -63,20 +59,12 @@ export function Myprojects4({language}) {
                <p className={projectyle.cardText}>{data[language].backendTechnology}</p>
                <p className={projectyle.cardText}>{data[language].authors}</p>
                <div className={projectyle.btnContainer}>
-                  <button className={projectyle.btn} onClick={()=> certificaciones({type:"code", show:true})}>Code</button>
+                  <button className={projectyle.btn} onClick={()=> certificaciones({type:"code", show:false})}>Code</button>
                   <button className={projectyle.btn}  onClick={()=> certificaciones({type:"code", show:false})}>Demo</button>
                </div>
-            </section>
-         </article>
+            </article>
+   
 
-         <Modal 
-           visible={showAlert}
-           title={"Esta app es un ejecutable para windows"}
-           bodyColor="#839dd1"
-           button1="Ok"
-           fnButton1={()=> setShowAlert(false)}
-           buttonColor="#262c40"
-         />
       </main>
 
    )

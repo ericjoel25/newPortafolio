@@ -3,6 +3,7 @@ import './App.css';
 import {appStyle}  from './utils/styles'; 
 import {Home, About, Myprojects, Myprojects2, Myprojects3, Myprojects4, Skill, Contact} from './pages'; 
 import {englishIcon, spanishIcon} from '../src/components/images'; 
+import {Modal} from './components/modal/modal'; 
  
 
 
@@ -14,6 +15,8 @@ export default function App() {
   const skillRef = useRef();
   const contactRef = useRef();
   const [language, setLanguage] = useState('es'); 
+  const [showAlert, setShowAlert] = useState(false); 
+
 
  useEffect(()=>{
   
@@ -56,26 +59,42 @@ export default function App() {
           <About gotoContact={()=>scrollTo(contactRef)} language={language.slice(0,2)}/>
         </section>
         <section ref={projectRef} className={appStyle.Projects}>
-         <Myprojects language={language.slice(0,2)}/>
+         <Myprojects language={language.slice(0,2)} setShowAlert={setShowAlert}/>
         </section>
         <section className={appStyle.Projects}>
           <Myprojects2 language={language.slice(0,2)} />
         </section>
+
         <section className={appStyle.Projects}>
-          <Myprojects3  language={language.slice(0,2)} />
+          <Myprojects3  language={language.slice(0,2)} setShowAlert={setShowAlert}/>
         </section>
         <section className={appStyle.Projects}>
-          <Myprojects4  language={language.slice(0,2)}/>
+          <Myprojects4  language={language.slice(0,2)} setShowAlert={setShowAlert}/>
         </section>
+
         <section ref={skillRef} className={appStyle.Skill}>
            <Skill language={language.slice(0,2)} />
         </section>
+      
         <section ref={contactRef} className={appStyle.Contact}>
          <Contact  language={language.slice(0,2)} />
         </section>
+            
+    
+        {/* 
+        */}
+      
       </article>
     
-  
+      
+      <Modal 
+           visible={showAlert}
+           title={'El codigo es privado debido a que la app esta en produción'}
+           bodyColor="#839dd1"
+           button1="Ok"
+           fnButton1={()=> setShowAlert(false)}
+           buttonColor="#262c40"
+         />
     </main>
   );
 

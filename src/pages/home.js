@@ -23,8 +23,8 @@ export function Home({callback, language}) {
     return (
 
         <main className={homeStyle.container}>
-            <article className={homeStyle.body}>
-                <section className={homeStyle.article} >
+          
+                <article className={homeStyle.article} >
                     <p className={homeStyle.title}>{data[language]?.sayHello}</p>    
                     <p className={homeStyle.title}>{data[language]?.name}</p>   
                     <p className={homeStyle.title}>{data[language]?.job}</p>   
@@ -32,14 +32,14 @@ export function Home({callback, language}) {
                          {/*  <FontAwesomeIcon icon={faEnvelope} className={homeStyle.btnIcon2} /> */}
                         <p className={homeStyle.btnText2}>{data[language]?.btnText}</p>
                     </span>
-                </section>
+                </article>
      
-                 <section className={homeStyle.article2} >
+                 <article className={homeStyle.article2} >
                     <div className={homeStyle.imgContainer}>
                       <img src={mePhoto} alt='home' className={homeStyle.Img} />
                     </div> 
-                </section>
-            </article>
+                </article>
+          
         </main>
 
     )
