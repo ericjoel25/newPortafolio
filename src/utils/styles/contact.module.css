@@ -238,7 +238,7 @@
 .notificationAlertTexBody{
   display: flex;
   width: 55dvw;
-  height: 30dvw;
+  height: 40dvw;
   align-items: center;
   background-color: rgba(51, 95, 132, 1);
   border-radius: 1rem;

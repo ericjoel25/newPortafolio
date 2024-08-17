@@ -36,15 +36,26 @@ export default function App() {
      setLanguage((prev)=> data[prev])
 
   }
+  const headerText ={
+      Home:"Inicio", 
+      About:'Acerca',
+      Projects:"Proyectos", 
+      Skills:"Habilidades", 
+      Contacts:"Contactos", 
+  }
+
+ const renderTextHerder = language ==="es"? Object.values(headerText): Object.keys(headerText); 
+
+ console.log(renderTextHerder); 
 
   return (
     <main  className={appStyle.container}>
       <nav className={appStyle.header}>
-        <button className={appStyle.headerBtn}  onClick={()=> scrollTo(homeRef)}>Home</button>
-        <button className={appStyle.headerBtn} onClick={()=> scrollTo(aboutRef)}>About</button>
-        <button className={appStyle.headerBtn} onClick={()=> scrollTo(projectRef)}>Projects</button>
-        <button className={appStyle.headerBtn} onClick={()=> scrollTo(skillRef)}>Skill</button>
-        <button className={appStyle.headerBtn} onClick={()=> scrollTo(contactRef)}>Contact</button>
+        <button className={appStyle.headerBtn}  onClick={()=> scrollTo(homeRef)}>{renderTextHerder[0]}</button>
+        <button className={appStyle.headerBtn} onClick={()=> scrollTo(aboutRef)}>{renderTextHerder[1]}</button>
+        <button className={appStyle.headerBtn} onClick={()=> scrollTo(projectRef)}>{renderTextHerder[2]}</button>
+        <button className={appStyle.headerBtn} onClick={()=> scrollTo(skillRef)}>{renderTextHerder[3]}</button>
+        <button className={appStyle.headerBtn} onClick={()=> scrollTo(contactRef)}>{renderTextHerder[4]}</button>
         <button className={appStyle.headerBtn} onClick={()=> changeLanguage()}>
           <span style={{marginRight:"0.5rem"}}>{language ==="es"?"Idioma":"Language"}</span>
           <img src={`${language ==='es'?spanishIcon:englishIcon}`} className={appStyle.headerIcon} />

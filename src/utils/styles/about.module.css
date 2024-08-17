@@ -140,6 +140,20 @@
     .container{
       flex-direction: column;
     }
+    .title2{
+      display: inline-block;
+      font-size: 1rem;
+      font-weight:400;
+      font-family:Georgia;
+      color: #fff;
+      animation: showText 2s ease-in;
+      word-break: keep-all;
+      padding-left: 1rem;
+      padding-right: 1rem;
+        
+  }
+
+  
   }
   
   
