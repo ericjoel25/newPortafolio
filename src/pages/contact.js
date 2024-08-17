@@ -7,7 +7,8 @@ import { contactStyle } from '../utils/styles';
 
 
 export function Contact({ language }) {
-  const [formData, setFormData] = useState({ subject: '', email: '', message: '' })
+  const [formData, setFormData] = useState({ subject: '', email: '', message: '' }); 
+  const [showAlert, setShowAlert] = useState(false); 
 
 
 
@@ -21,9 +22,14 @@ export function Contact({ language }) {
 
     try {
 
+      if (!formData.email || !formData.message || !formData.subject) {
+
+        setShowAlert(true);
+      }
+
       const headersList = {
         "Content-Type": "application/json"
-      }
+      };
 
       const bodyContent = JSON.stringify({
         "subject": formData.subject,
@@ -36,15 +42,18 @@ export function Contact({ language }) {
         method: "POST",
         headers: headersList,
         body: bodyContent
-      })
+      });
 
       const data = await response.text();
       const json = data === "" ? {} : JSON.parse(data);
 
-      console.log(data)
+      console.log(data);
+
+      setFormData({ subject: '', email: '', message: '' });
+
     } catch (error) {
 
-      console.log(error.message)
+      console.log(error.message);
 
     }
 
@@ -68,6 +77,23 @@ export function Contact({ language }) {
     a.click();
   }
 
+
+  function NotificationAlert({visible, showAlert, setShowAlert}) {
+
+    if(!visible) return <></>; 
+
+    return (
+      <section className={contactStyle.notificationAlertBody}>
+        <div className={contactStyle.notificationAlertTexBody}>
+          <p>¡Por favor completa la información!</p>
+          <button 
+            className={contactStyle.notificationAlertBtn}
+            onClick={()=> setShowAlert(false)}
+           >Ok</button>
+        </div>
+      </section>
+    )
+  }
 
   return (
 
@@ -98,11 +124,9 @@ export function Contact({ language }) {
           </span>
 
         </div>
-
       </section>
       <section className={contactStyle.card2}>
         <form className={contactStyle.card2Form}>
-
           <input className={contactStyle.card2FormInput}
             type="email" placeholder="Email"
             onChange={(value) => handleTextChange({ data: value, type: 'email' })}
@@ -119,11 +143,12 @@ export function Contact({ language }) {
             value={formData.message}
           />
           <button className={contactStyle.card2Btn} onClick={(e) => {
-            e.preventDefault()
-            sendEmail()
-            setFormData({ subject: '', email: '', message: '' })
+            e.preventDefault();
+            sendEmail();
           }} >Send</button>
         </form>
+
+        <NotificationAlert visible={showAlert} setShowAlert={setShowAlert}/>
       </section>
 
     </main>

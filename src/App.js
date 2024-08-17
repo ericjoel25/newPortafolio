@@ -46,6 +46,7 @@ export default function App() {
         <button className={appStyle.headerBtn} onClick={()=> scrollTo(skillRef)}>Skill</button>
         <button className={appStyle.headerBtn} onClick={()=> scrollTo(contactRef)}>Contact</button>
         <button className={appStyle.headerBtn} onClick={()=> changeLanguage()}>
+          <span style={{marginRight:"0.5rem"}}>{language ==="es"?"Idioma":"Language"}</span>
           <img src={`${language ==='es'?spanishIcon:englishIcon}`} className={appStyle.headerIcon} />
         </button>
       </nav>
@@ -81,8 +82,7 @@ export default function App() {
         </section>
             
     
-        {/* 
-        */}
+        {/*  */}
       
       </article>
     
