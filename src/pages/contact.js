@@ -125,31 +125,35 @@ export function Contact({ language }) {
 
         </div>
       </section>
-      <section className={contactStyle.card2}>
-        <form className={contactStyle.card2Form}>
-          <input className={contactStyle.card2FormInput}
-            type="email" placeholder="Email"
-            onChange={(value) => handleTextChange({ data: value, type: 'email' })}
-            value={formData.email}
-          />
-          <input className={contactStyle.card2FormInput}
-            type="text" placeholder="subject"
-            onChange={(value) => handleTextChange({ data: value, type: 'subject' })}
-            value={formData.subject}
-          />
-          <textarea className={contactStyle.card2FormInputLarge}
-            type="text" placeholder="Message"
-            onChange={(value) => handleTextChange({ data: value, type: 'message' })}
-            value={formData.message}
-          />
-          <button className={contactStyle.card2Btn} onClick={(e) => {
-            e.preventDefault();
-            sendEmail();
-          }} >Send</button>
-        </form>
 
-        <NotificationAlert visible={showAlert} setShowAlert={setShowAlert}/>
-      </section>
+      {/*
+        <section className={contactStyle.card2}>
+          <form className={contactStyle.card2Form}>
+            <input className={contactStyle.card2FormInput}
+              type="email" placeholder="Email"
+              onChange={(value) => handleTextChange({ data: value, type: 'email' })}
+              value={formData.email}
+            />
+            <input className={contactStyle.card2FormInput}
+              type="text" placeholder="subject"
+              onChange={(value) => handleTextChange({ data: value, type: 'subject' })}
+              value={formData.subject}
+            />
+            <textarea className={contactStyle.card2FormInputLarge}
+              type="text" placeholder="Message"
+              onChange={(value) => handleTextChange({ data: value, type: 'message' })}
+              value={formData.message}
+            />
+            <button className={contactStyle.card2Btn} onClick={(e) => {
+              e.preventDefault();
+              sendEmail();
+            }} >Send</button>
+          </form>
+
+          <NotificationAlert visible={showAlert} setShowAlert={setShowAlert}/>
+        </section>
+      */}
+     
 
     </main>
 

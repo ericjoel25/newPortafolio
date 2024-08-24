@@ -30,7 +30,7 @@
 .card {
   position: relative;
   display: flex;
-  width: 50dvw;
+  width: 100dvw;
   height: 100dvh;
   border-radius: 1rem;
   justify-content: center;
