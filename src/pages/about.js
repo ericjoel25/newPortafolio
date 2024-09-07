@@ -16,13 +16,13 @@ export function About({gotoContact, language}) {
     const data ={
         en:{
           title:'Who Am I?', 
-          title2:"I am a programmer that use web technology. I am looking for a position where I can use my knowledge for the development of the company.", 
+          title2:"Web developer specializing in front-end and notion on back-end development. Proficient in a range of technologies including HTML, CSS, JavaScript, React, React Native, Node.js, Firebase, SQL, and Tauri.js. Experienced in building responsive web and mobile applications with a focus on user-centered design, performance optimization, and seamless functionality. Known for delivering robust solutions that align with client goals and technical requirements, while maintaining scalability and best coding practices across projects.", 
           btnText:"Contact Me!", 
           btnText2:"Resume"
         }, 
      es:{
          title:"¿Quién soy?", 
-         title2:"Soy un programador que usa tecnología web. Busco un puesto donde pueda utilizar mis conocimientos para el desarrollo de la empresa.", 
+         title2:"Desarrollador web especializado en front-end y nociones sobre desarrollo back-end. Competente en una variedad de tecnologías que incluyen HTML, CSS, JavaScript, React, React Native, Node.js, Firebase, SQL y Tauri.js. Experiencia en la creación de aplicaciones web y móviles responsivas con un enfoque en el diseño centrado en el usuario, la optimización del rendimiento y la funcionalidad perfecta. Conocido por ofrecer soluciones sólidas que se alinean con los objetivos y requisitos técnicos del cliente, al mismo tiempo que mantienen la escalabilidad y las mejores prácticas de codificación en todos los proyectos.", 
          btnText:"¡Contáctame!", 
          btnText2:"Currículum"  
         }
