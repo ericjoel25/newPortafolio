@@ -108,11 +108,7 @@ export function Contact({ language }) {
             <FontAwesomeIcon icon={faEnvelope} className={contactStyle.cardIcon} />
             <span className={contactStyle.cardText}>Email</span>
           </span>
-          <span className={contactStyle.cardBtn} onClick={() => goTo({ URL: "tel:+18293606091" })}>
-            <FontAwesomeIcon icon={faPhone} className={contactStyle.cardIcon} />
-            <span className={contactStyle.cardText}>Phone</span>
-          </span>
-
+       
           <span className={contactStyle.cardBtn} onClick={() => goTo({ URL: "https://github.com/ericjoel25" })}>
             <img src={github} className={contactStyle.github} alt='github' />
             <span className={contactStyle.cardText}>Github</span>

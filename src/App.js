@@ -46,7 +46,7 @@ export default function App() {
 
  const renderTextHerder = language ==="es"? Object.values(headerText): Object.keys(headerText); 
 
- console.log(renderTextHerder); 
+ //console.log(renderTextHerder); 
 
   return (
     <main  className={appStyle.container}>

@@ -30,13 +30,16 @@ const data ={
 
 
 function certificaciones({type, show}) {
+
    if(type === "code" && !show){
 
       setShowAlert(true); 
       return; 
    }
-   window.open("https://play.google.com/store/apps/details?id=com.ericjoel.OrtografiaBasica&pcampaignid=web_share", "_blank");        
+   window.open("https://play.google.com/store/apps/details?id=com.ericjoel.OrtografiaBasica&pcampaignid=web_share", "_blank");    
+
 }
+
 
  return (
 
